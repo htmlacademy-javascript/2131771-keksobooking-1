@@ -1,7 +1,7 @@
 # Личный проект «Кексобукинг»
 
 * Студент: [Станислав Коробков](https://up.htmlacademy.ru/javascript-individual/1/user/2131771).
-* Наставник: Алексей Хабиров.
+* Наставник: [Алексей Хабиров](https://htmlacademy.ru/profile/id963185).
 
 ---
 
