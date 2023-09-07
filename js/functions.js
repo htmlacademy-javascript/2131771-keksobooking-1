@@ -27,23 +27,30 @@ function extractNumbersSum(str) {
 
 // Функция, возвращающая исходную строку, дополненную указанными символами до заданной длины.
 
-// принимает три параметра: исходную строку, минимальную длину и строку с добавочными символами
-// возвращает исходную строку, дополненную указанными символами до заданной длины.
-//Символы добавляются в начало строки.
-//Если исходная строка превышает заданную длину, она не должна обрезаться.
-//Если «добивка» слишком длинная, она обрезается с конца.
-
-functuion returnFullString(srt, srtMinLenght, strFillSymbols) {
-  if (str.length() >= srtMinLenght.length()) {
+function returnFullString(str, srtMinLenght, strFillSymbols) {
+  if (str.length >= srtMinLenght) {
     return str;
   }
   else {
-  let emptySymbols = srtMinLenght.length() - str.length();
+    let emptySymbols = srtMinLenght - str.length;
+    if (strFillSymbols.length <= srtMinLenght) {
+      for (let i = 1; i <= emptySymbols; i++) {
+        const symbolsToFill = strFillSymbols.slice(0,i);
+        const result = symbolsToFill + str;
+      }
+      return result;
+    }
+    else {
+      let emptySymbols = srtMinLenght - str.length;
+      if (strFillSymbols.length >= srtMinLenght) {
+        for (let i = 1; i <= emptySymbols; i++) {
+          let symbolsToFill = strFillSymbols.slice(0,i);
+          let result = symbolsToFill + str;
+        }
 
-  for (let i = 0; i < emptySymbols; i++) {
-    strFillSymbols.slice(0,i);
-  }
-  return
+        return result;
+      }
+    }
   }
 }
 
