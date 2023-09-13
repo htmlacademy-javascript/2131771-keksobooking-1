@@ -24,16 +24,14 @@ function extractNumbersSum(str) {
 // Функция, возвращающая исходную строку, дополненную указанными символами до заданной длины.
 
 function addPaddingToString(str, minLength, padding) {
-  if (str.length >= minLength) {
+ const actualPad = minLength - str.length;
 
-    return str;
-  } else {
-    const paddingLength = minLength - str.length;
-    const trimmedPadding = padding.slice(-paddingLength);
-    const result = trimmedPadding + str;
+ if (actualPad <= 0) {
 
-    return result;
-  }
+  return str;
+ }
+
+ return padding.slice(0, actualPad % padding.length) + padding.repeat(actualPad / padding.length) + str;
 }
 
 // Функция, возвращающая случайное число с плавающей точкой из переданного диапазона включительно.
